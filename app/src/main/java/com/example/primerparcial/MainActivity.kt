@@ -1,5 +1,6 @@
 package com.example.primerparcial
 
+import android.app.Application
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,6 +12,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.ViewModel
+import androidx.navigation.compose.rememberNavController
 import com.example.primerparcial.ui.theme.PrimerParcialTheme
 
 class MainActivity : ComponentActivity() {
@@ -35,6 +38,9 @@ class MainActivity : ComponentActivity() {
     @HiltAndroidApp
     class MyApp : Application()
 }
+
+annotation class HiltAndroidApp
+
 sealed class Event {
     // Ej: object Save : Event()
 }
@@ -48,6 +54,11 @@ sealed class Screen(val route: String) {
 class MainViewModel @Inject constructor() : ViewModel() {
     // Lógica pendiente
 }
+
+annotation class Inject
+
+annotation class HiltViewModel
+
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
