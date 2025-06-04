@@ -38,6 +38,12 @@ class MainActivity : ComponentActivity() {
 sealed class Event {
     // Ej: object Save : Event()
 }
+
+sealed class Screen(val route: String) {
+    object Registro : Screen("registro")
+    object Listar : Screen("listar")
+}
+
 @HiltViewModel
 class MainViewModel @Inject constructor() : ViewModel() {
     // Lógica pendiente
@@ -52,6 +58,15 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun ListarScreen() {
     Text("Pantalla Listar")
+}
+
+@Composable
+fun AppNavigation() {
+    val navController = rememberNavController()
+    NavHost(navController, startDestination = "registro") {
+        composable("registro") { RegistroScreen() }
+        composable("listar") { ListarScreen() }
+    }
 }
 
 @Composable
