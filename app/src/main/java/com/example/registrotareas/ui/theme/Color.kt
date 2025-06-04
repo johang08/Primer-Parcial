@@ -1,4 +1,4 @@
-package com.example.primerparcial.ui.theme
+package com.example.registrotareas.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

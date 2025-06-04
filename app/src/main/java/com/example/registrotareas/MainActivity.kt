@@ -1,4 +1,4 @@
-package com.example.primerparcial
+package com.example.registrotareas
 
 import android.app.Application
 import android.os.Bundle
@@ -14,14 +14,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModel
 import androidx.navigation.compose.rememberNavController
-import com.example.primerparcial.ui.theme.PrimerParcialTheme
+import com.example.registrotareas.ui.theme.PrimerParcialTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            PrimerParcialTheme {
+            RegistroTareasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
     }
     // MyApp.kt
     @HiltAndroidApp
-    class MyApp : Application()
+    class RegistroTareas : Application()
 }
 
 annotation class HiltAndroidApp
@@ -78,6 +78,11 @@ fun AppNavigation() {
         composable("registro") { RegistroScreen() }
         composable("listar") { ListarScreen() }
     }
+}
+
+@Composable
+fun NavHost(navController: Any, startDestination: String, content: () -> Unit) {
+
 }
 
 @Composable

@@ -1,4 +1,4 @@
-package com.example.primerparcial
+package com.example.registrotareas
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

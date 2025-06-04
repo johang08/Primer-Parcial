@@ -9,11 +9,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.primerparcial"
+    namespace = "com.example.registrotareas"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.primerparcial"
+        applicationId = "com.example.registrotareas"
         minSdk = 21
         targetSdk = 35
         versionCode = 1
@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation.compose.jvmstubs)
+    implementation(libs.androidx.annotation)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
