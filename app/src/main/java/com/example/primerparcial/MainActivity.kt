@@ -28,6 +28,9 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+    // MyApp.kt
+    @HiltAndroidApp
+    class MyApp : Application()
 }
 
 @Composable
