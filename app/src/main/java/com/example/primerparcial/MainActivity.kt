@@ -24,6 +24,9 @@ class MainActivity : ComponentActivity() {
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
+                    data class UiState(
+                        val id: Int = 0
+                    )
                 }
             }
         }
@@ -32,13 +35,28 @@ class MainActivity : ComponentActivity() {
     @HiltAndroidApp
     class MyApp : Application()
 }
-
+sealed class Event {
+    // Ej: object Save : Event()
+}
+@HiltViewModel
+class MainViewModel @Inject constructor() : ViewModel() {
+    // Lógica pendiente
+}
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
         modifier = modifier
     )
+}
+@Composable
+fun ListarScreen() {
+    Text("Pantalla Listar")
+}
+
+@Composable
+fun RegistroScreen() {
+    Text("Pantalla Registro")
 }
 
 @Preview(showBackground = true)
