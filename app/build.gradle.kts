@@ -6,6 +6,14 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id ("kotlin-android")
+    }
+dependencies {
+    implementation(libs.androidx.navigation.compose.jvmstubs)
+    implementation(libs.support.annotations)
+}
+
+
 }
 
 android {
@@ -62,6 +70,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
 
 
     implementation("com.google.dagger:hilt-android:2.48")

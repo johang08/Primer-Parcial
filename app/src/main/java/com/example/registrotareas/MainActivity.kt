@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModel
 import androidx.navigation.compose.rememberNavController
-import com.example.registrotareas.ui.theme.PrimerParcialTheme
+import com.example.registrotareas.ui.theme.RegistroTareasTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +37,10 @@ class MainActivity : ComponentActivity() {
     // MyApp.kt
     @HiltAndroidApp
     class RegistroTareas : Application()
+}
+
+class RegistroTareasTheme(function: @Composable () -> Unit) {
+
 }
 
 annotation class HiltAndroidApp
@@ -62,7 +66,7 @@ annotation class HiltViewModel
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Esto esta jodido $name!",
         modifier = modifier
     )
 }
@@ -93,7 +97,7 @@ fun RegistroScreen() {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    PrimerParcialTheme {
+    RegistroTareasTheme {
         Greeting("Android")
     }
 }
